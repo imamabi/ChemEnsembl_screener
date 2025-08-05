@@ -29,3 +29,54 @@ Ensure the following packages are installed:
 ```bash
 pip install scikit-learn xgboost optuna matplotlib joblib numpy
 ```
+_______________________________________________________________________
+
+### Usage
+1. Prepare Your Dataset
+
+Ensure that your training and test sets are preprocessed, encoded, and ready for ingestion:
+```python
+X_train, X_test, y_train, y_test = ...
+```
+
+2. Run the Pipeline
+
+You can run the pipeline in two ways:
+- Use All Available Models
+ ```python
+from train_pipeline import run_pipeline
+
+run_pipeline(X_train, y_train, X_test, y_test)
+```
+- Use a Subset of Models (Minimum 3)
+```python
+selected = ["forest", "xgboost", "svm"]
+run_pipeline(
+    X_train, y_train,
+    X_test, y_test,
+    selected_models=selected
+)
+```
+**Note**: A ValueError will be raised if fewer than 3 models are selected. 
+
+###### Each run is timestamped for easy tracking.
+
+__________________________________________________________________________________________
+
+### Evaluation Metrics
+
+Each model is evaluated on:
+
+-    Accuracy
+
+-    Precision
+
+-    Recall
+
+-    F1-score
+
+-    ROC-AUC (if applicable)
+
+-    Classification Report
+
+-    Confusion Matrix (raw + plot)
