@@ -12,7 +12,7 @@ This repository implements a robust and extensible machine learning pipeline for
 
 - Uses Optuna (TPE sampler) for efficient hyperparameter optimization
 
-- Combines selected models using VotingClassifier
+- Combines selected models using VotingClassifier (hard and soft voting)
 
 - Evaluates all models with key metrics and confusion matrices
 
