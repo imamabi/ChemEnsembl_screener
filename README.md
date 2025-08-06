@@ -46,7 +46,7 @@ You can run the pipeline in two ways:
  ```python
 from src.pipeline import run_pipeline
 
-artefacts = run_pipeline(X_train, y_train, X_test, y_test)
+artefacts = run_pipeline(X_train, y_train, X_test, y_test, voting="hard")
 ```
 - Use a Subset of Models (Minimum 3)
 ```python
@@ -54,6 +54,7 @@ selected = ["forest", "xgboost", "svm"]
 run_pipeline(
     X_train, y_train,
     X_test, y_test,
+    voting="soft",
     selected_models=selected
 )
 ```
