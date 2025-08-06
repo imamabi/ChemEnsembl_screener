@@ -44,9 +44,9 @@ X_train, X_test, y_train, y_test = ...
 You can run the pipeline in two ways:
 - Use All Available Models
  ```python
-from train_pipeline import run_pipeline
+from src.pipeline import run_pipeline
 
-run_pipeline(X_train, y_train, X_test, y_test)
+artefacts = run_pipeline(X_train, y_train, X_test, y_test)
 ```
 - Use a Subset of Models (Minimum 3)
 ```python
