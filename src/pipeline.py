@@ -65,7 +65,7 @@ def run_pipeline(X_train, y_train, X_test, y_test, voting: str = "hard", selecte
 
     #Check to ensure that all models have predict_proba if voting='soft'
     if voting == "soft":
-    missing_proba = [name for name, model in trained_models.items() if not hasattr(model, "predict_proba")]
+        missing_proba = [name for name, model in trained_models.items() if not hasattr(model, "predict_proba")]
     if missing_proba:
         raise ValueError(f"Models {missing_proba} do not support predict_proba required for soft voting.")
         
