@@ -34,10 +34,10 @@ _______________________________________________________________________
 ### Usage
 You can run the prepared "run_pipeline.py" as follows:
 ```bash
-python run_pipeline.py ./EGFR_train_scaffold.csv ./EGFR_test_scaffold.csv --selected_models forest xgboost svm --voting soft
+python run_pipeline.py ./data/EGFR_train_scaffold.csv ./data/EGFR_test_scaffold.csv --selected_models forest xgboost svm --voting soft
 ```
 #### or
-create a workflow with the following steps in a notebook:
+create a workflow with the following steps in a notebook (see run_pipeline.ipynb):
 
 1. Prepare Your Dataset
 
