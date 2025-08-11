@@ -32,6 +32,13 @@ pip install scikit-learn xgboost optuna matplotlib joblib numpy
 _______________________________________________________________________
 
 ### Usage
+You can run the prepared "run_pipeline.py" as follows:
+```bash
+python run_pipeline.py ./EGFR_train_scaffold.csv ./EGFR_test_scaffold.csv --selected_models forest xgboost svm --voting soft
+```
+#### or
+create a workflow with the following steps in a notebook:
+
 1. Prepare Your Dataset
 
 Ensure that your training and test sets are preprocessed, encoded, and ready for ingestion:
