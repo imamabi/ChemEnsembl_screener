@@ -1,6 +1,6 @@
-# ChemEnsembl_screener
+# ChemEn_learn
 ## Inhibitor Classification Pipeline — Optuna-Optimized Version
-Automated training and hyperparameter optimization of seven machine learning models using Optuna, integrated into a robust ensemble VotingClassifier.
+Chemical Ensemble Learn (ChemEn_learn) is an automated training and hyperparameter optimization pipeline for seven machine learning models using Optuna, integrated into a robust ensemble VotingClassifier.
 _________________________________________________________________________________________________________________________________________________________
 
 ### Overview
