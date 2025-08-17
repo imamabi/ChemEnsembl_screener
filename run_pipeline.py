@@ -20,7 +20,8 @@ def main():
     df_test = pd.read_csv(args.test_csv)
 
     # Your preprocessing here - select numeric features, drop unwanted cols etc.
-    non_features = {"y", "class", "MurckoScaffold", "standard_value" ,"canonical_smiles", "standardized_smiles", "molecule_chembl_id"}
+    non_features ={"y", "class", "MurckoScaffold",'standard_value', 'MolWt', 'LogP', 'TPSA',
+                    "canonical_smiles", "standardized_smiles", "molecule_chembl_id"}
     train_feat_cols = [c for c in df_train.columns if c not in non_features and pd.api.types.is_numeric_dtype(df_train[c])]
     test_feat_cols = [c for c in df_test.columns if c not in non_features and pd.api.types.is_numeric_dtype(df_test[c])]
     common_cols = [c for c in train_feat_cols if c in test_feat_cols]
