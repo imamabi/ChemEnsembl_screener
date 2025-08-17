@@ -25,7 +25,7 @@ Experimental Setup
 
 Dataset: Scaffold-split EGFR inhibitors (ChEMBL source)
 
-Features: 2048-bit Morgan fingerprints + selected RDKit 2D descriptors
+Features: 2048-bit Morgan fingerprints + selected RDKit descriptors
 
 Tuning: Optuna Bayesian optimization with 5-fold stratified cross-validation
 
